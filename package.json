@@ -12,10 +12,10 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/burner/e2e2d"
-  },
-  "bugs": {
-    "url": "https://github.com/patrimart/jack-of-all-decorators-ts/issues"
-  },
+	},
+	"bugs": {
+		"url": "https://github.com/patrimart/jack-of-all-decorators-ts/issues"
+	},
 	"keywords": [
 		"args",
 		"arguments",

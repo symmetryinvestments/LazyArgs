@@ -24,6 +24,9 @@ return parseCMD(options, "Header for the help string");
 // for nested options your prefix the passed args as --nested.arg "Foo"
 ```
 
+If -h or --help is passed the help information will be printed and
+process.exit(0) is called.
+
 This package requires:
 
 ```json
