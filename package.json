@@ -1,32 +1,37 @@
 {
-	"name": "e2e2d",
-	"version": "0.0.1",
+	"name": "lazyargs",
+	"version": "1.0.0",
 	"description": "",
-	"main": "dist/e2e2d.js",
-	"types": "dist/e2e2d.d.ts",
-	"directories": {
-		"test": "test"
-	},
+	"main": "dist/lazyargs.js",
+	"types": "dist/lazyargs.d.ts",
 	"scripts": {
 		"build": "npm-run-all build:clean build:compile",
 		"build:clean": "rm -rf dist",
 		"build:compile": "tsc"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/burner/e2e2d"
+  },
+  "bugs": {
+    "url": "https://github.com/patrimart/jack-of-all-decorators-ts/issues"
+  },
 	"keywords": [
-		"playwright",
-		"test",
-		"e2e",
-		"end-to-end",
-		"end-to-end test",
-		"documentation"
+		"args",
+		"arguments",
+		"argv",
+		"cli parser",
+		"cli",
+		"cmd",
+		"command line argument parser",
+		"command line argument",
+		"command line arguments",
+		"option parser",
+		"options",
+		"parser",
+		"process.argv",
+		"typescript"
 	],
 	"author": "Robert Schadek",
-	"license": "MIT",
-	"dependencies": {
-		"playwright": "^1.7.1"
-	},
-	"devDependencies": {
-		"npm-run-all": "^4.1.5",
-		"typescript": "^3.9.7"
-	}
+	"license": "MIT"
 }
