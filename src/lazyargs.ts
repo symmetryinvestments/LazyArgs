@@ -1,5 +1,5 @@
 // @checkJs: true
-const OptionMetaDataStore: string = "lazyArgs";
+const OptionMetaDataStore: string = "__lazyArgs";
 
 export type LazyCallback = (nesting: string[], key: string, options: any) => void;
 
@@ -29,16 +29,15 @@ class LazyArgs {
 
 function getLazyArg(target: Object, propertyKey: string): LazyArg {
 	let pro: Object = Object.prototype;
-	if(!pro.hasOwnProperty(OptionMetaDataStore)) {
-		(pro as any)[OptionMetaDataStore] = {};
+	if(typeof (getLazyArg as any).__lazyArgs == "undefined") {
+		(getLazyArg as any).__lazyArgs = {};
 	}
 
-	if(!(pro as any)[OptionMetaDataStore].hasOwnProperty(propertyKey)) {
-		(pro as any)[OptionMetaDataStore][propertyKey] =
-			new LazyArg(propertyKey);
+	if(!(getLazyArg as any).__lazyArgs.hasOwnProperty(propertyKey)) {
+		(getLazyArg as any).__lazyArgs[propertyKey] = new LazyArg(propertyKey);
 	}
 
-	return (pro as any)[OptionMetaDataStore][propertyKey];
+	return (getLazyArg as any).__lazyArgs[propertyKey];
 }
 
 /**

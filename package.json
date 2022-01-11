@@ -1,6 +1,6 @@
 {
 	"name": "lazyargs",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "",
 	"main": "dist/lazyargs.js",
 	"types": "dist/lazyargs.d.ts",
